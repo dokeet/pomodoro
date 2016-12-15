@@ -1,6 +1,6 @@
-<template>
-  <timer></timer>
-  
+<template>  
+<div class="app">   
+    <timer></timer>
 </div>
   
 
@@ -18,7 +18,16 @@ export default {
   
 </script>
 
- <style scoped>
+ <style lang="sass">
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  min-height: 100%; 
+}
 
 </style>
 
