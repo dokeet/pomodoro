@@ -1,15 +1,16 @@
 <template>
-	<div class="container has-text-centered">
-		
-		<div class="primaryButtons">
-			<button class="button is-primary is-large" @click="session">Pomodoro</button>
-			<button class="button is-primary is-large" @click="shortBreak">Short Break</button>
-			<button class="button is-primary is-large" @click="longBreak">Long Break</button>
+	<div class="container has-text-centered is-mobile">	
+		<div class="primary-buttons">
+			<button class="button is-primary" @click="session">Pomodoro</button>
+			<button class="button is-primary" @click="shortBreak">Short Break</button>
+			<button class="button is-primary" @click="longBreak">Long Break</button>
 			<p class="auto_start">
-				Status: {{state}} |
+				Status: {{state}}
+			</p> 
+			<span>
 				Auto start timer: 
 				<input type="checkbox" v-model="autoStart" class="checkbox">			
-			</p>
+			</span>
 		</div>
 		<div id="time"> 
 			<div v-show="!sessionStarted" class="icon is-large clickable" @click="up">
@@ -40,6 +41,7 @@
 
         mounted() {
             this.askNotify()
+
         },
         data() {
             return {
@@ -171,10 +173,14 @@
 <style lang="sass">
     html {
         background-color: #1A1B3A;
+        max-height: 100vh;
+        max-width: 100vw;
     }
     
-    p {
+    p,
+    span {
         color: #b33353;
+        font-size: 24px
     }
     
     .title {
@@ -183,11 +189,11 @@
     
     .title,
     .subtitle {
-        font-size: 25vh;
+        font-size: 20vh;
         color: #F62554
     }
     
-    .primaryButtons {
+    .primary-buttons {
         padding-bottom: 25px;
         padding-top: 10px;
     }
