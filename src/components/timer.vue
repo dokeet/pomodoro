@@ -41,7 +41,6 @@
 
         mounted() {
             this.askNotify()
-
         },
         data() {
             return {
@@ -129,17 +128,16 @@
                 }
             },
             notify(text) {
-                var vibrate = Notification.vibrate;
                 var options = {
                     icon: 'src/assets/tomato.png',
-                    vibrate: [100, 100]
                 }
 
                 // Let's check whether notification permissions have already been granted
                 if (Notification.permission === "granted") {
                     // If it's okay let's create a notification
                     var notification = new Notification(text, options);
-
+                    var audio = new Audio('src/assets/audio/bloop_x.wav')
+                    audio.play()
                 }
 
                 // Otherwise, we need to ask the user for permission
