@@ -106,17 +106,17 @@ import modal from '../components/modal.vue'
                 clearInterval(time)
                 this.sessionTime = 1500
                 this.timeMax = 1500
-                this.state = 'Pomodoro.'
+                this.state = 'Idle'
                 if (this.autoStart) {
                     this.start()
-                    this.state = 'Working!'
+                    this.state = 'Started.'
                 }
             },
             start() {
                 if (this.sessionTime === 0) {
                     this.sessionStarted = false
                 } else {
-                    this.state = 'Working!'
+                    this.state = 'Started.'
                     var d = new Date()
                     this.sessionStarted = true
                     this.date = d.getMinutes()
