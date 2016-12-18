@@ -1,26 +1,6 @@
 <template>
-
    <div class="hero is-fullheight">   
         <div class="container has-text-centered is-mobile">	
-            <!--<nav class="nav has-text-centered">
-                <div class="container">
-                    <div class="nav-center">
-                        <a class="nav-item is-tab">
-                        <button class="button is-primary" @click="openModal">About</button> 
-                        </a>
-                        <a class="nav-item is-tab">
-                            <button class="button is-primary" @click="session">Pomodoro</button>
-                        </a>
-                        <a class="nav-item is-tab">
-                            <button class="button is-primary" @click="shortBreak">Short Break</button>
-                        </a>
-                        <a class="nav-item is-tab">
-                            <button class="button is-primary" @click="longBreak">Long Break</button>
-                        </a>
-                    </div>             
-                </div>
-
-            </nav>-->
             <div class="primary-buttons">
                 <button class="button is-primary" @click="openModal">About</button>
                 <button class="button is-primary" @click="session">Pomodoro</button>
@@ -84,7 +64,6 @@
 
 <script>
 import modal from '../components/modal.vue'
-import _ from 'lodash'
     var time;
 
     export default {
