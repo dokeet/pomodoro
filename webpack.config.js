@@ -1,5 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+
 
 module.exports = {
   entry: './src/main.js',
@@ -8,6 +10,14 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  plugins: [
+    new SWPrecacheWebpackPlugin(
+      {
+        cacheId: 'pomodoro',
+        filename: './service-worker.js',
+      }
+    ),
+  ],
   module: {
     rules: [
       {
