@@ -14,7 +14,7 @@ module.exports = {
     new SWPrecacheWebpackPlugin(
       {
         cacheId: 'pomodoro',
-        filename: './service-worker.js',
+        filename: '/service-worker.js',
       }
     ),
   ],
