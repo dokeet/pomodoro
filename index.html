@@ -31,7 +31,7 @@
     <script src="./dist/build.js"></script>
     <script>    
     if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/pomodoro/service-worker.js', { scope: '/pomodoro/' }).then(function(reg) {
+    navigator.serviceWorker.register('/pomodoro/sw.js', { scope: '/pomodoro/' }).then(function(reg) {
         
         if(reg.installing) {
         console.log('Service worker installing');
