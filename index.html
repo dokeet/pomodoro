@@ -23,28 +23,29 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#1A1B3A">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <noscript>
+        "
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">"
+    </noscript>
 </head>
 
 <body>
     <div id="app"></div>
-    <script src="./dist/build.js"></script>
+    <script async src="./dist/build.js"></script>
     <script>    
     if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/pomodoro/sw.js', { scope: '/pomodoro/' }).then(function(reg) {
-        
-        if(reg.installing) {
-        console.log('Service worker installing');
-        } else if(reg.waiting) {
-        console.log('Service worker installed');
-        } else if(reg.active) {
-        console.log('Service worker active');
-        }
-        
-    }).catch(function(error) {
-        // registration failed
-        console.log('Registration failed with ' + error);
-    });
+        navigator.serviceWorker.register('/pomodoro/sw.js', { scope: '/pomodoro/' }).then(function(reg) {         
+            if(reg.installing) {
+            console.log('Service worker installing');
+            } else if(reg.waiting) {
+            console.log('Service worker installed');
+            } else if(reg.active) {
+            console.log('Service worker active');
+            }          
+        }).catch(function(error) {
+            // registration failed
+            console.log('Registration failed with ' + error);
+        });
     }
     </script>
 </body>
