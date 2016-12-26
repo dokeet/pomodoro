@@ -2,7 +2,7 @@
  "name": "Pomodoro Timer",
  "short_name": "Pomodoro",
  "background-color": "#1A1B3A",
- "display": "standalone",
+ "display": "browser",
  "scope": "/pomodoro/",
  "start_url": "/pomodoro/index.html",
  "theme_color": "#1A1B3A",
