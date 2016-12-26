@@ -36,10 +36,11 @@
                 <p class="auto_start">
                     Status: {{state}}
                 </p> 
+                    
                 <span>
                     Auto start timer: 
                     <input type="checkbox" v-model="autoStart" class="checkbox">			
-                </span>
+                </span>   
             <div id="time"> 
                 <div v-show="!sessionStarted" class="icon is-large clickable" @click="up">
                         <i class="button is-primary fa fa-caret-up" ></i>
@@ -64,6 +65,7 @@
 
 <script>
 import modal from '../components/modal.vue'
+
     var time;
 
     export default {
@@ -211,7 +213,7 @@ import modal from '../components/modal.vue'
 
         },
         components: {
-            modal
+            modal,
         }
     }
 </script>

@@ -1,6 +1,7 @@
 <template>  
 <div class="app">   
     <timer></timer>
+
 </div>
   
 
