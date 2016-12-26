@@ -213,7 +213,8 @@ import modal from '../components/modal.vue'
 
         },
         components: {
-            modal,
+            modal
+
         }
     }
 </script>
@@ -238,9 +239,7 @@ import modal from '../components/modal.vue'
 .hero {
     background-color: #1A1B3A;
 }
-.bg {
-    background-color: #F62554;
-}
+
 html {
     max-height: 100vh;
     max-width: 100vw;
